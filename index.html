@@ -1,36 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seokryun Choi</title>
   <style>
-    body {
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 16px;
-      font-family: Arial, sans-serif;
+    :root {
+      --bg: #efefef;
+      --text: #222222;
+      --muted: #9c8f82;
+      --link: #2f55ff;
+      --section: #1f1f1f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.7;
     }
-    h1 { margin-bottom: 8px; }
-    .muted { color: #666; }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 28px 72px;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .profile-image {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .affiliation {
+      margin-top: 2px;
+      font-size: 1.05rem;
+    }
+
+    .links {
+      margin-top: 28px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .main {
+      max-width: 680px;
+      margin: 62px auto 0;
+      font-size: 1.05rem;
+    }
+
+    .main p {
+      margin: 0 0 24px;
+    }
+
+    .section-title {
+      margin: 18px 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--section);
+    }
+
+    ul {
+      margin: 0 0 0 22px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 0 20px 56px;
+      }
+
+      .profile-image {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .main {
+        margin-top: 44px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Seokryun Choi</h1>
-  <p class="muted">Master's Student / Researcher</p>
+  <div class="page">
+    <header class="hero">
+      <div class="profile-image">
+        <img src="profile.jpg" alt="Profile photo of Your Name" />
+      </div>
 
-  <p>
-    Hi I am a robot researcher.
-  </p>
+      <h1>Seokryun Choi</h1>
+      <div class="subtitle">M.S.</div>
+      <div class="affiliation">
+        <a href="https://gsai.kaist.ac.kr/">M.S. in Kim Jaechul Graduate School of AI, KAIST</a>
+      </div>
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Legged Robot</li>
-    <li>Event Vision</li>
-  </ul>
+   
+    </header>
 
-  <h2>Contact</h2>
-  <p>srchoi99@gmail.com</p>
+    <main class="main">
+      <p>
+        I received my M.S. from the Kim Jaechul Graduate School of AI at KAIST, where I was advised by
+  <a href="#">Sung-eui Yoon</a>. My research interests include legged robots and event vision.
+      </p>
+
+    
+    </main>
+  </div>
 </body>
 </html>
